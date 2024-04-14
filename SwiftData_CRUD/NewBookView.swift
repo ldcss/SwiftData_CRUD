@@ -5,15 +5,16 @@
 //  Created by Lucas Daniel Costa da Silva on 10/04/24.
 //
 
+import Foundation
 import SwiftUI
 
 struct NewBookView: View {
   @Environment(\.modelContext) private var context
   @Environment(\.dismiss) var dismiss
   
-  @State private var title = ""
-  @State private var author = ""
-  @State private var publisher = ""
+  @State private var title: String = .empty
+  @State private var author: String = .empty
+  @State private var publisher: String = .empty
   var body: some View {
     NavigationStack {
       Form {

@@ -11,25 +11,25 @@ struct EditBookView: View {
   @Environment(\.dismiss) private var dismiss
   let book: Book
   
-  @State private var title = ""
-  @State private var author = ""
-  @State private var publisher = ""
-  @State private var summary = ""
+    @State private var title: String = .empty
+  @State private var author: String = .empty
+  @State private var publisher: String = .empty
+  @State private var summary: String = .empty
   
   var body: some View {
     VStack(alignment: .leading){
       LabeledContent {
-        TextField("", text: $title)
+          TextField(String.empty, text: $title)
       } label: {
         Text("Título").foregroundStyle(.secondary)
       }
       LabeledContent {
-        TextField("", text: $author)
+        TextField(String.empty, text: $author)
       } label: {
         Text("Autor(a)").foregroundStyle(.secondary)
       }
       LabeledContent {
-        TextField("", text: $publisher)
+        TextField(String.empty, text: $publisher)
       } label: {
         Text("Editora").foregroundStyle(.secondary)
       }
