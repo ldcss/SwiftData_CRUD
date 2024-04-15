@@ -12,7 +12,7 @@ struct NewBookView: View {
   @Environment(\.modelContext) private var context
   @Environment(\.dismiss) var dismiss
   
-  @State private var title: String = .empty
+    @State private var title: String = .empty
   @State private var author: String = .empty
   @State private var publisher: String = .empty
   var body: some View {
