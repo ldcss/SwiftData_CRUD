@@ -5,18 +5,19 @@
 //  Created by Lucas Daniel Costa da Silva on 10/04/24.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct BookListView: View {
   @Environment(\.modelContext) private var context
   @Query(sort: \Book.title) private var books: [Book]
+    
   @State private var createNewBook = false
   
   var body: some View {
     NavigationStack{
       Group{
-        if books.count != 0 {
+          if !books.isEmpty {
           List{
             ForEach(books) { book in
               NavigationLink{
